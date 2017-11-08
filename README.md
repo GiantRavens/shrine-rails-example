@@ -1,24 +1,10 @@
-# README
+# Rails 5 Shrine Upload Example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A barebones port of Janko's Shrine for Rails example application.
 
-Things you may want to cover:
+No CSS or styling - just the basics to do the following:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- add the shrine gem, an init file for shrine configuration, mount the shrine ImageUploader to the Photo model, add the 'virtual' image_uploader model
+- a PHOTO has one image attachment
+- the attachment is cached and stored locally in public/uploads/ (but that folder is added to .gitignore so that you're not checking images into your source code)
+- added a present? check on rendering the thumbnails - deleted images were crashing the app without it
